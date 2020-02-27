@@ -17,9 +17,12 @@ public class Eratosthenes {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //delcare boolean array
         boolean numbers[] = new boolean[1001];
         Arrays.fill(numbers, true);
+        //0 and 1 aernt prime numbers
         numbers[0] = numbers[1] = false;
+        //test of numbers that are primes
         for (int x = 2; x <= 1000; x++) {
             if (numbers[x]) {
                 for (int y = x * x; y < numbers.length; y += x) {
@@ -28,6 +31,7 @@ public class Eratosthenes {
 
             }
         }
+        //printing in the correct manner
         System.out.println("The prime numbers from 1-1000 are:");
         int println = 0;
         for (int t = 0; t < numbers.length; t++) {
